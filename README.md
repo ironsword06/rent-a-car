@@ -11,8 +11,11 @@ Angular Project.
 
 
 > Ekleme, Silme ve Güncelleme işlemleri yapıldı.
+> 
 > Login Register işlemleri yapıldı.
+> 
 > Api'den veriler çekildi
+> 
 > Arabalar listelendi
 
 
