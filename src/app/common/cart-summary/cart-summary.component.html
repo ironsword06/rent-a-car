@@ -1,0 +1,28 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+      Cart
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+      <li class="dropdown-item active" *ngFor="let cartItem of cartItems" href="#"><span class="badge badge-pill badge-primary bg-danger text-light">
+        {{ cartItem.quantity }}</span
+      >
+      {{ cartItem.car.brandName }}
+      <button
+        class="btn btn-danger"
+        (click)="removeFromCart(cartItem.car)"
+      >delete
+      </button>
+      </li>
+<li class="dropdown-item active" *ngFor="let add of additionalCartItems" href="#"><span class="badge badge-pill badge-primary bg-danger text-light">
+        {{ add.quantity }}</span
+      >
+      {{ add.additionalServiceModel.additional }}
+      <button
+        class="btn btn-danger"
+        (click)="removeFromCart2(add.additionalServiceModel)"
+      >delete
+      </button>
+      </li>
+    </ul>
+
+  </div>

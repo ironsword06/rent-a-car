@@ -1,0 +1,32 @@
+.card {
+    width: 400px;
+    border: .5 solid #999;
+    padding: 50px 0;
+  }
+  
+  .nav-pills {
+    display: table !important;
+    width: 100%;
+  }
+  
+  .form {
+    padding: 10px;
+  }
+  
+  .form input {
+    margin-bottom: 12px;
+    border-radius: 3px;
+  }
+  
+  .form input:focus {
+    box-shadow: none;
+  }
+  
+  .form button {
+    margin-top: 20px;
+  }
+  
+  .form button:focus {
+    box-shadow: none;
+  }
+  

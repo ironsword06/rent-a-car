@@ -1,0 +1,15 @@
+a {
+    color :grey
+}
+
+a:hover{
+    color:white
+
+}
+form button{
+    color :grey;
+    border-color: grey
+}
+form button:hover {
+    background-color:white ;
+}

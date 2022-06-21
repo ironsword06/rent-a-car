@@ -1,0 +1,58 @@
+<div class="container">
+    <h3 class="m-3">Add Car</h3>
+    <form [formGroup]="carAddForm" (ngSubmit)="add()" >
+      <div class="form-group">
+        <label for="brandName" class="block">Brand</label>
+        <select class="form-control" required name="brandName" id="brandName" formControlName="brandName">
+          <option *ngFor="let brand of brands" [value]="brand.name">
+            {{brand.name}}
+          </option>
+        </select>
+      </div>
+      <!-- <div class="form-group">
+        <label for="brandName" class="block">Color Name</label>
+        <select class="form-control" required name="colorName" id="colorName" formControlName="colorName">
+          <option *ngFor="let car of cars" [value]="car.colorName">
+            {{car.colorName}}
+          </option>
+        </select>
+      </div> -->
+      <!-- <div class="form-group m-3">
+        <label for="name" class="block">Brand Name</label>
+        <input id="name" formControlName="brandName" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.brandName" pInputText />
+        <small *ngIf="carAddForm.get('brandName').hasError('required') && carAddForm.get('name').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div> -->
+      <!-- <div class="form-group m-3">
+        <label for="name" class="block">Car id</label>
+        <input id="id" formControlName="id" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.id" pInputText />
+        <small *ngIf="carAddForm.get('id').hasError('required') && carAddForm.get('id').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div> -->
+      <div class="form-group m-3">
+        <label for="name" class="block">Car description</label>
+        <input id="description" formControlName="description" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.description" pInputText />
+        <small *ngIf="carAddForm.get('description').hasError('required') && carAddForm.get('description').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Brand id</label>
+        <input id="BrandId" formControlName="brandId" type="number" aria-describedby="username-help" class="form-control" [(ngModel)]="car.brandId" pInputText />
+        <small *ngIf="carAddForm.get('brandId').hasError('required') && carAddForm.get('brandId').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Daily Price</label>
+        <input id="dailyPrice" formControlName="dailyPrice" type="number" aria-describedby="username-help" class="form-control" [(ngModel)]="car.dailyPrice" pInputText />
+        <small *ngIf="carAddForm.get('colorId').hasError('required') && carAddForm.get('colorId').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Color id</label>
+        <input id="colorId" formControlName="colorId" type="number" aria-describedby="username-help" class="form-control" [(ngModel)]="car.colorId" pInputText />
+        <small *ngIf="carAddForm.get('colorId').hasError('required') && carAddForm.get('colorId').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Color Name</label>
+        <input id="colorName" formControlName="colorName" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.colorName" pInputText />
+        <small *ngIf="carAddForm.get('colorName').hasError('required') && carAddForm.get('colorName').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="add" >add</button>
+
+    </form>
+  </div>

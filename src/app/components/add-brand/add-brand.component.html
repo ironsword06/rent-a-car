@@ -1,0 +1,17 @@
+<h3>Add Brand</h3>
+ 
+<form [formGroup]="brandAddForm" (ngSubmit)="add()" >
+<div class="form-group">
+    <input type="text" id="name" formControlName="name" class="form-control" placeholder="Brand name">
+    <div class="alert alert-danger" *ngIf="brandAddForm.get('name').hasError('required') && brandAddForm.get('name').dirty"> ürün adı zorunludur</div>
+</div>
+<div class="form-group">
+    <input type="text" id="id" formControlName="id" class="form-control" placeholder="Brand id">
+    <div class="alert alert-danger" *ngIf="brandAddForm.get('id').hasError('required') && brandAddForm.get('id').dirty"> fiyat zorunludur</div>
+</div>
+<div class="form-group">
+    <input type="text" id="logo" formControlName="logo" class="form-control" placeholder="Brand logo">
+    <div class="alert alert-danger" *ngIf="brandAddForm.get('logo').hasError('required') && brandAddForm.get('logo').dirty"> stok zorunludur</div>
+</div>
+  <button type="submit" class="btn btn-primary" [disabled]="brandAddForm.invalid">Add</button>
+</form>

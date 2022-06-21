@@ -1,0 +1,32 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <!-- <img src="..." class="img-fluid rounded-start" alt="..."> -->
+      </div>
+      <div  class="col-md-8">
+        <div class="card-body" *ngFor="let car of cars">
+          <h5 class="card-title">{{car.brandName}}</h5>
+          <p class="card-text">{{car.description}}.</p>
+          <p class="card-text">{{car.dailyPrice}}.</p>
+          <p class="card-text"><small class="text-muted">*without tax prices</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-light">
+    <thead>
+      <tr>
+        <th scope="col">Additional</th>
+        <th scope="col">Daily Price</th>
+        <th scope="col">Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let additionalService of additionalServiceModel">
+        <td>{{ additionalService.additional }}</td>
+        <td>{{ additionalService.dailyPrice }}₺</td>
+        <td>{{ additionalService.description }}</td>
+        <td><button type="button" (click)="addToCart2(additionalService)" class="btn btn-success">Add</button></td>
+      </tbody>
+      </table>

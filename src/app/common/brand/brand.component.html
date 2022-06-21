@@ -1,0 +1,14 @@
+<br>
+<div class="list-group">
+    <a  class="list-group-item list-group-item-action disabled" style="background-color: rgb(0, 0, 0); color:aliceblue;">Brand</a>
+    <div *ngFor="let brand of brands" >
+        <a  class="list-group-item list-group-item-action" routerLink="/cars/{{brand.id}}">  <img src="{{brand.logo}}" style="width: 40px; padding-right: 15px; " >{{brand.name}}
+            <button id="btn1" type="button" routerLink="updatebrand/{{brand.id}}" class="btn btn-dark">Edit</button>
+            <button id="btn2" type="button" (click)="deleteBrand(brand.id)" class="btn btn-danger">Delete</button>
+        </a>
+        
+    </div>
+    <button type="button" routerLink="addbrand" class="btn btn-dark">Add brand</button>
+    <button type="button" routerLink="addcar" class="btn btn-dark">Add car</button>
+
+</div>

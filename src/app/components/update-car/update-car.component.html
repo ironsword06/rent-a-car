@@ -1,0 +1,32 @@
+<div class="container">
+    <h3 class="m-3">Car Editor</h3>
+    <form [formGroup]="carUpdateForm" (ngSubmit)="update()" >
+      <div class="form-group m-3">
+        <label for="name" class="block">Brand Name</label>
+        <input id="name" formControlName="brandName" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.brandName" pInputText />
+        <small *ngIf="carUpdateForm.get('brandName').hasError('required') && carUpdateForm.get('name').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Car id</label>
+        <input id="id" formControlName="id" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.id" pInputText />
+        <small *ngIf="carUpdateForm.get('id').hasError('required') && carUpdateForm.get('id').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Car description</label>
+        <input id="description" formControlName="description" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.description" pInputText />
+        <small *ngIf="carUpdateForm.get('description').hasError('required') && carUpdateForm.get('description').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Brand id</label>
+        <input id="BrandId" formControlName="brandId" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.brandId" pInputText />
+        <small *ngIf="carUpdateForm.get('brandId').hasError('required') && carUpdateForm.get('brandId').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Color id</label>
+        <input id="colorId" formControlName="colorId" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="car.colorId" pInputText />
+        <small *ngIf="carUpdateForm.get('colorId').hasError('required') && carUpdateForm.get('colorId').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="update" >update</button>
+
+    </form>
+  </div>

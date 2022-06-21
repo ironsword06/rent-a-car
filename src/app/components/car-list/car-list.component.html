@@ -1,0 +1,28 @@
+<table class="table" >
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Car</th>
+        <th scope="col">Brand name</th>
+        <th scope="col">Model/Description</th>
+        <th scope="col">Color</th>
+        <th scope="col">Daily price</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Rent</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars">
+            <th scope="row" ></th>
+            <td>{{car.brandName}}</td>
+            <td>{{car.description}}</td>
+            <td>{{car.colorName}}</td>
+            <td>{{car.dailyPrice}}</td>
+            <td><button id="btn1" type="button" routerLink="updatecar/{{car.id}}" class="btn btn-dark">Edit</button></td>
+            <td><button id="btn2" type="button" (click)="deleteCar(car.id)" class="btn btn-danger">Delete</button></td>
+            <td> <button id="btn3" type="button" routerLink="cars/rent/{{car.id}}" (click)="addToCart(car)" class="btn btn-primary">Go Rent</button></td>
+          </tr>
+          
+    </tbody>
+  </table>

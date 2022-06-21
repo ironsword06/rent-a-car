@@ -1,0 +1,22 @@
+<div class="container">
+    <h3 class="m-3">Brand Update</h3>
+    <form [formGroup]="brandUpdateForm" (ngSubmit)="update()" >
+      <div class="form-group m-3">
+        <label for="name" class="block">Brand Name</label>
+        <input id="name" formControlName="name" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="brand.name" pInputText />
+        <small *ngIf="brandUpdateForm.get('name').hasError('required') && brandUpdateForm.get('name').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Brand id</label>
+        <input id="name" formControlName="id" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="brand.id" pInputText />
+        <small *ngIf="brandUpdateForm.get('name').hasError('required') && brandUpdateForm.get('logo').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <div class="form-group m-3">
+        <label for="name" class="block">Brand logo</label>
+        <input id="name" formControlName="logo" type="text" aria-describedby="username-help" class="form-control" [(ngModel)]="brand.logo" pInputText />
+        <small *ngIf="brandUpdateForm.get('name').hasError('required') && brandUpdateForm.get('name').dirty" id="username-help" class="p-error block ng-invalid ng-dirty">Name is not available.</small>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="update" >update</button>
+
+    </form>
+  </div>

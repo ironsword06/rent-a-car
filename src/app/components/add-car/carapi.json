@@ -1,0 +1,113 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "Mercedes",
+      "logo": "./assets/logos/mercedes.png"
+    },
+    {
+      "id": 2,
+      "name": "BMW",
+      "logo": "./assets/logos/bmw.png"
+    },
+    {
+      "id": 3,
+      "name": "Supra",
+      "logo": "./assets/logos/supra.png"
+    },
+    {
+      "id": 4,
+      "name": "Skyline",
+      "logo": "./assets/logos/skyline.png"
+    },
+    {
+      "id": 5,
+      "name": "Tofaş",
+      "logo": "./assets/logos/tofas.png"
+    },
+    {
+      "id": 6,
+      "name": "Audi",
+      "logo": "./assets/logos/Audi.png"
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "brandName": "Mercedes",
+      "brandId": 1,
+      "colorId": 1,
+      "dailyPrice": 8500,
+      "description": "2020 Mercedes-Maybach S560.",
+      "colorName": "Black"
+    },
+    {
+      "id": 2,
+      "brandName": "BMW",
+      "brandId": 2,
+      "colorId": 3,
+      "dailyPrice": 10750,
+      "description": "e46 M5 Competition.",
+      "colorName": "Black"
+    },
+    {
+      "id": 3,
+      "brandName": "Toyota",
+      "brandId": 3,
+      "colorId": 3,
+      "dailyPrice": 99999,
+      "description": "SUUUPPPRAAAAA.",
+      "colorName": "Gray"
+    },
+    {
+      "id": 4,
+      "brandName": "Nissan",
+      "brandId": 4,
+      "colorId": 1,
+      "dailyPrice": 99999,
+      "description": "Skyline r34 nismo-Z.",
+      "colorName": "White"
+    },
+    {
+      "id": 5,
+      "brandName": "Tofaş",
+      "brandId": 5,
+      "colorId": 2,
+      "dailyPrice": 11200,
+      "description": "Dip basık deli fişek mavi slx.",
+      "colorName": "White"
+    },
+    {
+      "id": 6,
+      "brandName": "Audi",
+      "brandId": 6,
+      "colorId": 1,
+      "dailyPrice": 14200,
+      "description": "A8 Long.",
+      "colorName": "Black"
+    },
+    {
+      "brandName": "Mercedes",
+      "brandId": "1",
+      "colorId": "1",
+      "description": "E250CDI",
+      "colorName": "Black",
+      "dailyPrice": "10003",
+      "id": 9
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "name": "Black"
+    },
+    {
+      "id": 2,
+      "name": "White"
+    },
+    {
+      "id": 3,
+      "name": "Grey"
+    }
+  ]
+}
